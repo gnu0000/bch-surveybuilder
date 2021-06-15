@@ -1,0 +1,53 @@
+.header #appinfo {
+   left: 100px;
+}
+
+
+
+#survey-index table {
+   margin: 1em 3em;
+   border-collapse: collapse;
+   }
+
+#survey-index th {
+   border-bottom: 2px solid gray;
+   margin: 0.3em 1em;
+   padding: 5px;
+   text-align: left;
+   padding: 5px 10px;
+}
+
+#survey-index td {
+   margin: 0.3em 1em;
+   padding: 5px 10px;
+
+   border-bottom: 1px solid #F8F8F8;
+}
+
+#survey-index td:nth-child(1) {
+   text-align: right;
+}
+
+#survey-index td:nth-child(2) {
+   font-weight: bold;
+}
+
+#survey-index td:nth-child(3) {
+   font-size: 0.8em;
+}
+
+#survey-index button {
+  transform: scale(0.6);
+   
+}
+
+#survey-index td a {
+   text-decoration: none;
+   color: black;
+}
+
+.add {
+   margin-left: 4em;
+}
+
+

@@ -1,0 +1,287 @@
+body {
+   user-select: none;
+}
+
+.arena {
+   position: relative;
+   left:   0.1%;
+   top:    0.1%;
+   height: 99.9%;
+   width:  99.8%;
+   overflow: scroll;
+   background: radial-gradient(ellipse at center, #FFD 0%, white 90%);
+}
+
+#pin {
+   position: relative;
+   right: 4000px;
+   top: 200%;
+}
+
+.toolbox {
+   position: fixed;
+   top: 6.5em;
+   left: 1.5em;
+   width: 5em;
+   height: 18.3em;
+   border: 3px solid gray;
+   border-radius: 8px;
+
+   z-index: 10;
+   background: rgba(0, 0, 0, 0);
+   background-image:url('/images/white.png'); 
+}
+
+.toolbox-header {
+   font-size: 75%;
+   text-align: center;
+   height: 1.2em;
+   color: white;
+   background-color: gray;
+}
+
+.toolbox-header p {
+   padding: 0;
+   margin: 0;
+}
+
+.toolbox-proto {
+   margin: 12px;
+}
+
+.toolbox-trash {
+   margin: 8px 18px;
+}
+
+ul { 
+   list-style-type: none; 
+   margin:  0; 
+   padding: 0; 
+   margin-bottom: 10px; 
+}
+
+.sources li {
+   border: 3px solid gray;
+   background-color: #D8D8D8;
+   border-radius: 8px;
+   width: 3em;
+   min-height: 2.25em;
+   background-position: 1px 3px;
+   margin: 5px 12px;
+}
+
+.questions{
+   padding-bottom: 1.5em;
+}
+
+.questions li {
+   position: relative;
+   border: 3px solid gray;
+   background-color: #D8D8D8;
+   border-radius: 8px;
+   width: 12em;
+   min-height: 2.25em;
+   margin: 5px 8px;
+}
+
+.questions li.selected {
+   background-color: white;
+}
+
+.questions .child {
+   margin: 5px 25px;
+}
+
+.questions li .id {
+   position: absolute;
+   top: 5px;
+   left: 0.5em;
+   font-weight: bold;
+   font-size: 1.4rem;
+}
+.questions li .title {
+   position: absolute;
+   top: 5px;
+   left: 2.5em;
+   font-weight: bold;
+   font-size: 1.4rem;
+}
+
+.add {
+   position: relative;
+   border: 3px solid gray;
+   background-color: #D8D8D8;
+   border-radius: 8px;
+   width: 1.5em;
+   height: 1.5em;
+   margin: 0;
+   top: -0.5em;
+   left: 4.75em;
+   font-weight: bold;
+   font-size: 1.2rem;
+}
+
+.sources li .id {
+   position: relative;
+   top: 5px;
+   left: 15px;
+   font-weight: bold;
+   font-size: 1.4rem;
+   margin: 0;
+   padding: 0;
+}
+
+.examples {
+   margin: 1em;
+}
+
+.examples a {
+   padding: 1em;
+}
+
+.buttons {
+   position: absolute;
+   bottom: 1em;
+   left: 1em;
+}
+
+.buttons button {
+   margin-right: 2em;
+   border-radius: 4px;
+   font-weight: bold;
+}
+
+.jsplumb-drag {
+   z-index: 20;
+}    
+
+.question-box {
+   position: absolute;
+   top: 6.5em;
+   left: 8em;
+   width: 13.4em;
+   min-height: calc(100% - 10em);
+   border: 3px solid gray;
+   border-radius: 8px;
+   background: white;
+   margin-bottom: 3em;
+}    
+
+.details-box {
+   position: fixed;
+   top: 6.5em;
+   left: 23em;
+   width: calc(100% - 24.25em);
+   min-width: 30em;
+   height: calc(100% - 10em);
+   border: 3px solid gray;
+   border-radius: 8px;
+   background: white;
+}
+
+input, select, textarea, .editable {
+   border-radius: 4px;
+   border: 2px solid lightgray;
+   padding: 2px 4px;
+}
+
+.details-box-content {
+   margin: 1em 0em 1em 1em;
+}
+
+.details-box-content label {
+   font-weight: bold;
+}
+
+.details-box-content span {
+   margin-right: 0.5em;
+}
+
+.details-box-content p {
+   margin-bottom: 0.2rem;
+}
+
+#id-pos {
+   width: 6em;
+}
+
+input[name=id] {
+   width: 4em;
+}
+
+#type-pos {
+   width: 8em;
+}
+
+input[name=title] {
+   width: calc(100% - 21rem);
+}
+
+.question-atts.placeholder {
+   width:  calc(100% - 7.5rem);
+   margin: 1rem 0;
+   height: 10rem;
+   border: 3px solid #CCC;
+   border-radius: 8px;
+   background: #EEE;
+   padding: 3rem;
+   font-size: 1.5rem;
+   font-weight: bold;
+
+}
+
+.question-text {
+   display: inline-block;
+   width:  calc(100% - 1.85rem);
+   margin: 0;
+   min-height: 4rem;
+}
+
+.details-box-content .responses {
+   width:  calc(100% - 1.4rem);
+   border: 2px solid gray;
+   border-radius: 4px;
+}
+
+.details-box-content .responses table {
+   table-layout: fixed;
+   width: calc(100% + 1px);
+   margin: 0;
+   border-collapse: collapse;
+}
+
+
+.details-box-content th {
+   font-size: 90%;
+   text-align: left;
+   height: 1.2em;
+   color: white;
+   background-color: gray;
+   padding-left: 4px;
+}
+
+.details-box-content th:nth-child(1) {
+   width: calc(100% - 8rem);
+}
+
+.details-box-content th:nth-child(2),
+.details-box-content td:nth-child(2) {
+   width: 4rem;
+   text-align: center;
+}
+
+.details-box-content th:nth-child(3),
+.details-box-content td:nth-child(3) {
+   width: 4rem;
+   text-align: center;
+}
+
+.details-box-content tr {
+   min-height: 1.2em;
+   border-bottom: 1px solid #EEE;
+}
+
+.details-box-content td {
+   min-height: 1.2em;
+   padding-left: 5px;
+}

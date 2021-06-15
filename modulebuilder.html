@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <link href="/css/jsplumb-defaults.css" rel="stylesheet">
+      <link href="common.css" rel="stylesheet">
+      <link href="modulebuilder.css" rel="stylesheet">
+      <script src="/js/jquery.min.js">                       </script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="modulebuilder.js">                        </script>
+   </head>
+   <body>
+      <div class="all">
+         <div class="header">
+            <a title="Module Builder" id="app_logo" href="/prototypes/Surveybuilder/">
+               <img src="trivox_logo.png" />
+            </a>
+            <div id="appname">Module Builder</div>
+            <div id="appinfo"><span id="id" contenteditable="true">0</span>:<span id="title" contenteditable="true">New Module</span></div>
+         </div>
+         <div class="main">
+            <div id="arena" class="arena jtk-surface">
+               <div id="plumb_container">
+               </div>
+               <div id="pin">.
+               </div>
+            </div>
+            <div id="toolbox" class="toolbox">
+               <div class="toolbox-header">
+                  <p>Toolbox</p>
+               </div>
+               <div id="trashcan" class="toolbox-trash">
+                  <img src="/images/tritrash-small.png" alt="trashcan"/>
+               </div>
+               <ul class="sources">
+                  <li class="source question q-type">
+                     <div class="id">Q</div>
+                     <div class="title"></div>
+                  </li>
+                  <li class="source question c-type">
+                     <div class="id">C</div>
+                     <div class="title"></div>
+                  </li>
+                  <li class="source question e-type">
+                     <div class="id">E</div>
+                     <div class="title"></div>
+                  </li>
+                  <li class="source question l-type">
+                     <div class="id">L</div>
+                     <div class="title"></div>
+                  </li>
+               </ul>
+            </div>
+            <div id="question-box" class="question-box">
+               <div class="toolbox-header">
+                  <p>Questions</p>
+               </div>
+               <ul class="questions" id="questions">
+               </ul>
+               <button class="add" />+</button>
+            </div>
+            <div id="details-box" class="details-box">
+               <div class="toolbox-header">
+                  <p>Question Details</p>
+               </div>
+               <div id="details-box-content" class="details-box-content">
+                  <div id="common-atts">
+                     <span id="id-pos"><label>Id:</label> <input type="text" name="id" value="" /></span>
+                     <span id="type-pos"><label>Type:</label>
+                        <select id="type-select">
+                           <option>INFO</option> 
+                           <option>CONTINUE</option> 
+                           <option>MC</option> 
+                           <option>MMC</option> 
+                           <option>MULTI</option> 
+                           <option>MYN</option> 
+                        <select>
+                     </span>
+                     <span id="label-pos"><label>Title:</label> <input type="text" name="title" value="" /></span>
+                  </div>
+                  <div class="question-atts hidden INFO placeholder">
+                     TODO: info stuff
+                  </div>
+                  <div class="question-atts hidden CONTINUE placeholder">
+                     TODO: continue stuff
+                  </div>
+                  <div class="question-atts hidden MC">
+                     <p><label>Text:</label></p>
+                     <div class="question-text editable" contenteditable="true"></div>
+                     <p><label>Responses:</label></p>
+                     <div class="responses">
+                        <table>
+                           <tr>
+                              <th>Text</th>
+                              <th>Value</th>
+                              <th>Next</th>
+                           </tr>
+                           <tr>
+                              <td contenteditable="true">Strongly disagree</td>
+                              <td contenteditable="true">0</td>
+                              <td contenteditable="true">XXX</td>
+                           </tr>
+                           <tr>
+                              <td contenteditable="true">Disagree</td>
+                              <td contenteditable="true">1</td>
+                              <td contenteditable="true">XXX</td>
+                           </tr>
+                           <tr>
+                              <td contenteditable="true">Dont give a crap</td>
+                              <td contenteditable="true">2</td>
+                              <td contenteditable="true">XXX</td>
+                           </tr>
+                           <tr>
+                              <td contenteditable="true">Agree</td>
+                              <td contenteditable="true">3</td>
+                              <td contenteditable="true">XXX</td>
+                           </tr>
+                           <tr>
+                              <td contenteditable="true">Strongly agree</td>
+                              <td contenteditable="true">4</td>
+                              <td contenteditable="true">XXX</td>
+                           </tr>
+                           <tr>
+                              <td contenteditable="true"></td>
+                              <td contenteditable="true"></td>
+                              <td contenteditable="true"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <p>
+                     TODO: (is child)(nest question id)(save response)
+                     </p>
+                  </div>
+                  <div class="question-atts hidden MMC placeholder">
+                     TODO: mmc stuff
+                  </div>
+                  <div class="question-atts hidden MULTI placeholder">
+                     TODO: multi stuff
+                  </div>
+                  <div class="question-atts hidden MYN placeholder">
+                     TODO: myn stuff
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer">
+            <button id="saveproject"    >Save</button>
+            <button id="renumberproject">Renumber</button>
+            <button id="validateproject">Validate</button>
+            <button id="publishproject" disabled>Publish</button>
+         </div>
+      </div>
+   </body>
+</html>
+
+
+

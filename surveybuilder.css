@@ -1,0 +1,256 @@
+body {
+   user-select: none;
+}
+
+.arena {
+   position: relative;
+   left:   0.1%;
+   top:    0.1%;
+   height: 99.9%;
+   width:  99.8%;
+   overflow: scroll;
+   background: radial-gradient(ellipse at center, #FFD 0%, white 90%);
+}
+
+#pin {
+   position: relative;
+   right: 4000px;
+   top: 200%;
+}
+
+.toolbox {
+   position: absolute;
+   top: 6.5em;
+   right: 1.5em;
+   width: 16em;
+   height: 40em;
+   max-height: calc(100% - 10em);
+   min-height: 11em;
+   border: 3px solid gray;
+   border-radius: 8px;
+
+   z-index: 10;
+   background: rgba(0, 0, 0, 0);
+   background-image:url('/images/white.png'); 
+}
+
+.toolbox-header {
+   font-size: 75%;
+   text-align: center;
+   height: 1.2em;
+   color: white;
+   background-color: gray;
+}
+
+.toolbox-header p {
+   padding: 0;
+   margin: 0;
+}
+
+.toolbox-proto {
+   margin: 12px;
+}
+
+.toolbox-trash {
+   position: absolute;
+   right: 12px;
+   top: 24px;
+}
+
+.toolbox-finder {
+   position: absolute;
+   top: 7.5em;
+   width: 100%;
+}
+.toolbox-finder span {
+   margin: 0.4em;
+}
+
+
+.toolbox-finder input {
+   margin: 0px 8px;
+   width: calc(100% - 28px);
+   border-radius: 4px;
+   border: 2px solid lightgray;
+   padding: 2px 4px;
+}
+
+.toolbox-finder img {
+   position: absolute;
+   top: 0.15em;
+   right: 0.8em;
+   z-index: 100;
+
+}
+
+.invisible {
+   visibility: hidden;
+}
+
+.focus {
+   border: 1px solid #1b4063;
+}
+
+   
+.toolbox-matches {
+   position: absolute;
+   margin: 8px;
+   top:    142px;
+   width:  calc(100% - 20px);
+   height: calc(100% - 160px);
+   border: 2px solid lightgray;
+   border-radius: 4px;
+   overflow: auto;
+}
+
+
+.block, .block-source {
+   position: absolute;
+   border: 3px solid gray;
+   background-color: #D8D8D8;
+   border-radius: 8px;
+   width: 10em;
+   min-height: 3.5em;
+   
+/* background-image:url('/images/block-background.png'); */
+   background-position: 1px 3px;
+}
+
+div.toolbox-matches div.block-source {
+   position: relative;
+   left: 2em;
+   margin: 4px;
+}
+
+.block .label, .block-source .label {
+   position: absolute;
+   top: 3px;
+   left: 3px;
+   font-weight: bold;
+   font-size: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.block .name, .block-source .name {
+   width: 7em;
+   text-align: center;
+   vertical-align: middle; 
+   padding: 1em;
+   font-weight: bold;
+   font-size: 110%;      
+}
+
+.block .label {
+   text-decoration: none;
+}
+.block .label:hover {
+   text-decoration: underline;
+}
+
+
+#block1{top: 5em; left:  5em}
+#block2{top: 10em; left: 20em}
+#block3{top: 6em;  left: 39em}
+#block4{top: 20em; left: 10em}
+#block5{top: 20em; left: 25em}
+#block6{top: 18em; left: 40em}
+
+#plumb_container{
+   display:    none;
+   visibility: hidden;
+}
+
+.examples {
+   margin: 1em;
+}
+
+.examples a {
+   padding: 1em;
+}
+
+.moduleproperties {
+   position: absolute;
+   top: 8em;
+   left: 4em;
+   width: 26em;
+   height: 10em;
+   border: 3px solid gray;
+   border-radius: 8px;
+
+   z-index: 10;
+   background: white;
+}
+
+.moduleproperties-header {
+   font-size: 75%;
+   text-align: center;
+   height: 1.2em;
+   color: white;
+   background-color: gray;
+}
+
+.moduleproperties-header p {
+   padding: 0;
+   margin: 0;
+}
+
+.input-row {
+   position: relative;
+   margin: 0.5em 1em;
+}
+
+.input-row label {
+   position: relative;
+   top: 2px;
+   font-weight: bold;
+}
+
+.input-row input {
+   position: absolute;
+   left: 6.5em;
+   width: 21.5em;
+   border-radius: 4px;
+   border: 2px solid lightgray;
+   padding: 2px 4px;
+}
+
+.buttons {
+   position: absolute;
+   bottom: 1em;
+   left: 1em;
+}
+
+.buttons button {
+   margin-right: 2em;
+   border-radius: 4px;
+   font-weight: bold;
+}
+
+.jsplumb-drag {
+   z-index: 20;
+}    
+
+.spinner {
+   display: none;
+/*   display: inline-block; */
+   width: 40px;
+   height: 40px;
+   border: 5px solid rgba(220,220,220,0.25);
+   border-top: 5px solid white;
+   background-clip: content-box;
+   border-radius: 50%;
+   animation: spin 1.25s linear infinite;
+   z-index: 99;
+}
+
+#spinner {
+   position: absolute;
+   right: 1em;
+   top: 1em;
+}
+
+@keyframes spin {
+  0%   {transform: rotate(0deg)  }
+  100% {transform: rotate(360deg)}
+}

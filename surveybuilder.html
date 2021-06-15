@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <link href="/css/jsplumb-defaults.css" rel="stylesheet">
+      <link href="common.css" rel="stylesheet">
+      <link href="surveybuilder.css" rel="stylesheet">
+      <script src="/js/jquery.min.js">                       </script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="/js/jsplumb-1.7.10-min.js">               </script>
+      <script src="surveybuilder.js">                    </script>
+      <script src="blockfinder.js">                      </script>
+      <script src="projectplumber.js">                   </script>
+   </head>
+   <body>
+      <div class="all">
+         <div class="header">
+            <a title="Survey Builder" id="app_logo" href="/prototypes/Surveybuilder/">
+               <img src="trivox_logo.png" />
+            </a>
+            <div id="appname">Survey Builder</div>
+            <div id="appinfo"><span id="id" contenteditable="true">0</span>:<span id="title" contenteditable="true">New Survey</span></div>
+            <div id="spinner" class="spinner"></div>
+         </div>
+         <div class="main">
+            <div id="arena" class="arena jtk-surface">
+               <div id="plumb_container">
+               </div>
+               <div id="pin">.
+               </div>
+            </div>
+            <div id="toolbox" class="toolbox">
+               <div class="toolbox-header">
+                  <p>Toolbox</p>
+               </div>
+               <div class="block-source-container toolbox-proto">
+                  <div id="new-block-source" class="block-source">
+                     <div class="label"></div>
+                     <div class="name">New Module</div>
+                     <div class="cond hidden">Condition</div>
+                  </div>
+               </div>
+               <div id="trashcan" class="toolbox-trash">
+                  <img src="/images/tritrash-small.png" alt="trashcan"/>
+               </div>
+               <div class="toolbox-finder">
+                  <input id="finderinput" type="text" name="search" placeholder="Find"/>
+                  <img id="finderimage" class="invisible" src="/images/loading8.gif" alt="loading image"/>
+               </div>
+               <div id="finderresults" class="toolbox-matches">
+               </div>
+            </div>
+            <div id="moduleproperties" class="moduleproperties hidden">
+               <div class="moduleproperties-header">
+                  <p>Module Properties</p>
+               </div>
+               <div class="moduleproperties-content">
+                  <div class="input-row">
+                     <label for="modulelabel">Id:</label>                 
+                     <input name="label" id="modulelabel" type="text">
+                  </div>
+                  <div class="input-row">
+                     <label for="modulename">Title:</label>               
+                     <input name="name" id="modulename" type="text">
+                  </div>
+                  <div class="input-row">
+                     <label for="modulecond">Logic:</label> 
+                     <input name="cond" id="modulecond" type="text">
+                  </div>
+                  <div class="buttons">
+                     <button class="done">Done</button>
+                     <button class="module-builder">ModuleBuilder</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer">
+            <button id="saveproject"    >Save</button>
+            <button id="validateproject">Validate</button>
+            <button id="publishproject" disabled>Publish</button>
+         </div>
+      </div>
+   </body>
+</html>
+
+
+
